@@ -1,0 +1,74 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    height: 3000px;
+    background-color:rgb(49, 49, 49);
+    padding: 20px;
+}
+
+.object {
+    border: 2px solid black;
+    box-sizing: border-box;
+    border-radius: 7px;
+    margin:5px;
+}
+
+p {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.no-padding {
+    padding: 0px 10px;
+}
+
+.A {
+    background-color: aquamarine;
+    width: 180px;
+    height: 213px;
+    position: absolute; /*The element is positioned relative to its first positioned (not static)
+                         ancestor element*/
+    left: 80%;
+    top: 30px;
+    z-index: -1; /*specifies the stack order of an element. An element with greater stack order is always
+                in front of an element with a lower stack order*/
+}
+
+.B {
+    background-color: blanchedalmond;
+    width: 200px;
+    height: 150px;
+    position: static; /*Default value. Elements render in order, as they appear in the document flow*/
+}  
+
+.C {
+    background-color: blueviolet;
+    width: 150px;
+    height: 140px;
+    position: fixed; /*The element is positioned relative to the browser window*/
+    top: 30%;
+    right:50%;
+}
+
+.D {   
+    background-color: rgb(172, 172, 172);
+    width: 220px;
+    height: 170px;
+    position: relative; /*The element is positioned relative to its normal position, 
+                        so "left:20px" adds 20 pixels to the element's LEFT position*/ 
+    left: 80px;
+    top: 90px;                   
+}
+
+.shade{
+    position: absolute;
+    top: 175px;
+    left: 20px;
+    background-color: rgba(172, 172, 172, 0.137);
+    border: 2px solid rgb(255, 255, 255); 
+    border-style: dashed;
+    z-index: -1;
+}

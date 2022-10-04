@@ -1,0 +1,68 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    padding: 15px;
+    background-color: white;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 40px;
+}
+
+/*This is for the red box to adapt when the screen resizes*/
+
+.container-container {
+    display: flex;
+}
+
+/*Here I set the form and color of the container and the boxes*/
+
+.container {
+    box-sizing: border-box;
+    width: 1000px; /*if the width is changed to 150px and the container's display is flex, the boxes shrinks (eventhough they are set
+    to a specific width)*/
+    height: 550px; /*if the height is changed to 25px and the container's display is flex, boxes overflow!! hmmmm...*/
+    background-color: rgb(128, 30, 30);
+    border: 5px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: auto;
+}
+
+.box {
+    width: 200px;
+    height: 160px;
+    background-color: #1e8080;
+    border: 3px solid  white ;
+    border-radius: 3px;
+}
+
+/*Now, just experiment with the Flex Model*/
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch; /*Only works if there is no specific height set. Elements with a minimum height or no height set will stretch*/
+    flex-wrap: wrap;
+}
+
+.box {
+    /*This is to center the letter*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*----------------------------*/
+
+
+}
