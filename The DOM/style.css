@@ -1,0 +1,122 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+    height: 100%;
+}
+
+body {
+    background-image: linear-gradient(to right top, #20a2d3, #56b8dd, #7ecde7, #a4e2f2, #c9f7ff);
+    font-family: 'Playfair Display', serif;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 4rem;
+    margin: auto;
+    margin-top: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid black;
+    text-align: center;
+    width: 80%;
+}
+
+p {
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+/*CHOOSE SECTION*/
+
+.choose-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    margin-top: 6rem;
+}
+
+.button {
+    width: 11rem;
+    height: 6rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 10px 10px 20px grey;
+    transition: background-color 250ms, box-shadow 250ms;
+}
+
+.button:hover {
+    box-shadow: 7px 7px 15px darkslategrey;
+    cursor: pointer;
+}
+
+/*MAN*/
+#man {
+    background-color: #3086a3;
+}
+
+#man:hover {
+    background-color: #56b2d1;
+}
+
+/*WOMAN*/
+#woman {
+    background-color: #ce86e0;
+    margin: 0 5rem;
+}
+
+#woman:hover {
+    background-color: #edb3fd;
+}
+
+/*WEIRDO*/
+#weirdo {
+    background-color: #5bfa90;
+}
+
+#weirdo:hover {
+    background-color: #a4f8c0;
+}
+
+/*RESULT SECTION*/
+
+#result {
+    margin: auto;
+    margin-top: 3.5rem;
+    width: 50%;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    max-height: 100%;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: none;
+}
+
+/*Reset button*/
+
+#reset-button {
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0.3rem 0.3rem lightgrey;
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    background-color: rgb(177, 177, 177);
+    padding: 0.5rem 1rem;
+    transition: backgroundColor 250ms, box-shadow 250ms;
+}
+
+#reset-button:hover {
+    cursor: pointer;
+    background-color: rgb(122, 122, 122);
+    box-shadow: 0 0 0 0.4rem lightgrey;
+}
