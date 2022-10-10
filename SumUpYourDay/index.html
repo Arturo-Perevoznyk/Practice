@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lan="en">
+
+<!-- Useful shortcuts
+    Code formatting: Shift + Alt + F
+    Copy line up/down: Shift + Alt + Up/Down
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--For mobile compatibility-->
+    <link rel="stylesheet" href="./style.css">
+    <!--Links the HTML to the CSS doc-->
+    <title></title>
+    <!--Insert title here-->
+</head>
+
+<body>
+    <h1>Track your mistakes. Learn from them. Became wise.</h1>
+    <form action="">
+    <p>Write below three things you have done wrong.</p>
+    <label for="first-bad">First: </label>
+    <input type="text" id= 'first-bad' name="first-bad"> <!-- The 'id' is to connect the <label> with the <input> -->
+    <br>
+    <label for="second-bad">Second: </label>
+    <input type="text" id= 'second-bad' name= 'second-bad'> <!-- The 'name' is unsed when you submit the informatio
+    and send it to the server side -->
+    <br>
+    <label for="third-bad">Third: </label>
+    <input type="text" id= 'third-bad'>
+    <p>Write below three things you have done well.</p>
+    <label for="first-well">First: </label>
+    <input type="text" id= 'first-well'>
+    <br>
+    <label for="second-well">Second: </label>
+    <input type="text" id= 'second-well'>
+    <br>
+    <label for="third-well">Third: </label>
+    <input type="text" id= 'third-well'>
+    <br>
+    <label for="satisfaction-level">Rate your satisfaction level from 0 to 10:</label>
+    <input type="range" name="satisfaction-level" id="satisfaction-level" min="0" max="10" step="0.1"> <!-- 'step' is
+    to manage the precision of your range (jumping from 1 to 2, from 1 to 1.5, from 1 to 1.1, etc) -->
+    <br>
+    <p>Tick the habits you achieved today:</p>
+    <label for="habit1">Stand up early (before 9)</label>
+    <input type="checkbox" value='Stand up early' id="habit1" name="habits-achieved">
+    <label for="habit2">Go to bed early</label>
+    <input type="checkbox" value='Go to bed early' id="habit2" name="habits-achieved">
+    <label for="habit3">Eat less than 25gr of sugar</label>
+    <input type="checkbox" value='Eat less than 25gr of sugar' id="habit4" name="habits-achieved">
+    <label for="habit5">Medidate</label>
+    <input type="checkbox" value='Medidate' id="habit5" name="habits-achieved">
+    <br>
+    <label for="comments">Any additional comments or explanations</label>
+    <input type="">
+</form>
+</body>
+
+</html>
