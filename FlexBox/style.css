@@ -4,7 +4,6 @@
 }
 
 body {
-    padding: 15px;
     background-color: white;
     font-family: Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
@@ -13,7 +12,9 @@ body {
 h1 {
     text-align: center;
     text-decoration: underline;
-    margin-bottom: 10px;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
 }
 
 p {
@@ -30,9 +31,11 @@ p {
 
 .container {
     box-sizing: border-box;
-    width: 1000px; /*if the width is changed to 150px and the container's display is flex, the boxes shrinks (eventhough they are set
+    width: 1000px;
+    /*if the width is changed to 150px and the container's display is flex, the boxes shrinks (eventhough they are set
     to a specific width)*/
-    height: 550px; /*if the height is changed to 25px and the container's display is flex, boxes overflow!! hmmmm...*/
+    height: 550px;
+    /*if the height is changed to 25px and the container's display is flex, boxes overflow!! hmmmm...*/
     background-color: rgb(128, 30, 30);
     border: 5px solid black;
     border-radius: 5px;
@@ -41,10 +44,10 @@ p {
 }
 
 .box {
-    width: 200px;
+    flex-basis: 200px;
     height: 160px;
     background-color: #1e8080;
-    border: 3px solid  white ;
+    border: 3px solid white;
     border-radius: 3px;
 }
 
@@ -53,7 +56,8 @@ p {
 .container {
     display: flex;
     justify-content: space-around;
-    align-items: stretch; /*Only works if there is no specific height set. Elements with a minimum height or no height set will stretch*/
+    align-items: stretch;
+    /*Only works if there is no specific height set. Elements with a minimum height or no height set will stretch*/
     flex-wrap: wrap;
 }
 
@@ -63,6 +67,64 @@ p {
     justify-content: center;
     align-items: center;
     /*----------------------------*/
+}
 
+/*SECOND PART SET UP*/
 
+.container-two h4 {
+    font-size: 2rem;
+}
+
+.container-two p {
+    font-size: 1.5rem;
+}
+
+.container-two {
+    border: 5px solid black;    
+    width: 85%;
+    margin: auto;
+    margin-top: 3rem;
+    gap: 5px;
+    border-radius: 5px;
+}
+
+.box-1,
+.box-2,
+.box-3 {
+    border: 2px solid white;
+    background-color: #1E8080;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+/*SECOND PART: EXPERIMENTING WITH FLEX*/
+
+.container-two {
+    display: flex;
+}
+
+.box-1,
+.box-2,
+.box-3 {}
+
+.box-1 {
+    flex-basis: 15rem;
+}
+
+.box-2 {
+    flex: 1;
+}
+
+.box-3 {
+    flex: 1;
+}
+
+/*FOOTER*/
+footer {
+    box-sizing: border-box;
+    width: 100%;
+    height: 10rem;
+    background-color: lightslategrey;
+    border: 1px solid black;
+    margin-top: 3rem;
 }
