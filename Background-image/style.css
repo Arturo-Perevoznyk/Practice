@@ -6,17 +6,12 @@
 body {
     background-color: rgb(206, 234, 236);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin-top: 2rem;
-    text-align: center;
+    padding-top: 2rem;
 }
 
 h1 {
     text-decoration: underline;
-}
-
-p {
-    font-size: 1.3rem;
-    font-weight: 700;
+    text-align: center;
 }
 
 .container {
@@ -25,36 +20,44 @@ p {
     height: auto;
     padding: 10px;
     border: 5px solid black;
+    box-shadow: 15px 15px 10px lightslategray;
     margin: auto;
     margin-top: 40px;
+
+    /*Grid formatting*/
     display: grid;
     grid-template-columns: 1fr 3fr 2fr;
     grid-template-rows: 180px 330px;
     gap: 10px;
     justify-items: center;
     justify-content: space-evenly;
+
+    /*Font and text style*/
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center;
 }
 
 .frame {
     width: 100%;
     border: 1px solid black;
     overflow: hidden;
-    background-image: url(image.jpg);
-    /*The default mode is to repeat the image*/
+    background-image: url("image.jpg");
     background-repeat: no-repeat;
-}
-
-/* The  hover thing is not polished: it does transition in 0.5s, but when the cursor is not hovering it fades instantly. Why?
-.frame:hover {
-    opacity: 0.7;
     transition: opacity  0.5s;
 }
-*/
 
-/*
-.A {
-    -------No formatting-------
+.frame:hover {
+/* The  hover thing is not polished: it does transition in 0.5s, but when the cursor is not hovering it fades instantly. Why? 
+SOLVED: I was applying the transition property in frame:hover, not in the .frame as it needs to be.
+    transition: opacity  0.5s; */
+
+    opacity: 0.7;
 }
+
+
+/*  A has no formatting.
+.A {}
 */
 
 .B {
@@ -78,3 +81,11 @@ p {
     background-position: center;
     background-size: cover;
 }
+
+/* .table-sumup {
+    border:5px solid black;
+    display: grid;
+    grid-template-columns: 160px 70%;
+    grid-template-rows: 50px 50px;
+} */
+
