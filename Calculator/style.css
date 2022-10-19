@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color:thistle;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 30%;
+    margin: 1rem auto 0px;
+    border-bottom: 5px solid black;
+}
+
+.container {
+    background-color: lightslategray;
+    box-shadow: 0 0 15px 10px rgb(255, 255, 255);
+    font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 30rem;
+    height: 35rem;
+    margin: 2rem auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: grid;
+    gap: 3px;
+    padding: 5px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+
+}
+
+.container > * {
+    border: 3px solid black;
+    border-radius: 7px;
+    background-color: white;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    transition: background-color 150ms;
+}
+
+.container > *:hover:not(.screen) {
+    cursor: pointer;
+    background-color: rgb(214, 214, 214);
+    user-select: none;
+}
+
+.screen {
+    background-color: rgb(65, 72, 78);
+    color: white;
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 2;
+    padding: 1rem;
+    display: grid;
+    justify-content: end;
+}
+
+.screen p {
+    /*STILL NEEDS TO BE FORMATED TO FIX THE OVERFLOW*/
+    border: 2px solid rgb(172, 172, 172);
+    border-radius: 5px;
+    text-align: end;
+}
+
+.equal {
+    grid-area: 5 / 4 / span 3 / 4;
+}
+
+.zero {
+    grid-column: 1 / span 2;
+}
