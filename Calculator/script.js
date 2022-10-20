@@ -2,8 +2,9 @@
 let textOnScreen = document.querySelector('.screen p');
 
 // THIS IS WHAT THE USER SEES IN THE SCREEN
-textOnScreen.innerHTML = "Use me like a little dirty bitch!";
-// textOnScreen.innerHTML = "8 + 9";
+// textOnScreen.innerHTML = "I'm your slutty machine!";
+textOnScreen.innerHTML = "8 + ";
+
 // THIS IS WHAT THE PROGRAM SEES: an array wiht the numbers and the operations, without spaces.
 let innerExpression = [];
  
@@ -13,14 +14,13 @@ function addToScreen(newData) {
 }
 
 function updateInnerExpression() {
-    innerExpression = textOnScreen.innerHTML.split(' ');
-    innerExpression = clearWhiteSpaces(innerExpression);
-}
+     innerExpression = textOnScreen.innerHTML.split(' ');
+     innerExpression = clearWhiteSpaces(innerExpression);
+ }
 
 function clearWhiteSpaces(arr) {
     return arr.filter(word => word.length > 0);
 }
-
 
 // OPERATION BUTTONS DECLARATION
 const reset = document.querySelector('.reset');
@@ -30,6 +30,7 @@ const pluss = document.querySelector('.plus');
 const minus = document.querySelector('.minus');
 const split = document.querySelector('.split');
 const multiply = document.querySelector('.multiply');
+const deletee = document.querySelector('.delete');
 
 // NUMBERS AND COMA
 const zero = document.querySelector('.zero');
@@ -51,10 +52,10 @@ numbers.forEach(number => {
         addToScreen(number.innerHTML);
         updateInnerExpression();
 
-        //TO TEST
+    //TO TEST
     console.log(`Last innerExpression was supposed to be : ${innerExpression[innerExpression.length - 1]}`);
-    console.log(`Inner expresion is currently: ${innerExpression}`)
-    console.log(`The innerHTML has this length: ${textOnScreen.innerHTML.length}`)
+     console.log(`Inner expresion is currently: ${innerExpression}`)
+     console.log(`The innerHTML has this length: ${textOnScreen.innerHTML.length}`)
     })
 });
 
@@ -70,9 +71,14 @@ coma.addEventListener('click',  () => {
 }})
 
 //  PROGRAM OPERATION BUTTONS
-reset.addEventListener('click', () => {
+
+function cleanEverything () {
     textOnScreen.innerHTML = '';
     innerExpression = [];
+}
+
+reset.addEventListener('click', () => {
+    cleanEverything();
 })
 
 pluss.addEventListener('click', () => {
@@ -84,11 +90,6 @@ pluss.addEventListener('click', () => {
         addToScreen(' + ');
         updateInnerExpression();
     }
-
-    // TO TEXT
-    // console.log(`Last innerExpression was supposed to be : ${innerExpression[innerExpression.length - 1]}`);
-    // console.log(`Inner expresion is currently: ${innerExpression}`)
-    // console.log(`The innerHTML has this length: ${textOnScreen.innerHTML.length}`)
 })
 
 multiply.addEventListener('click', () => {
@@ -100,17 +101,18 @@ multiply.addEventListener('click', () => {
             addToScreen(' x ');
             updateInnerExpression();
         }
-    })
+})
     
-    minus.addEventListener('click', () => {
-        if ((innerExpression[innerExpression.length - 1] != '+')
-        && (innerExpression[innerExpression.length - 1] != '-')
-        && (innerExpression[innerExpression.length - 1] != '/')
-        && (innerExpression[innerExpression.length - 1] != 'x')
-        && (innerExpression.length > 0)) {
-            addToScreen(' - ');
-            updateInnerExpression();
-    }
+minus.addEventListener('click', () => {
+    if ((innerExpression[innerExpression.length - 1] != '+')
+    && (innerExpression[innerExpression.length - 1] != '-')
+    && (innerExpression[innerExpression.length - 1] != '/')
+    && (innerExpression[innerExpression.length - 1] != 'x')) {
+    //WARNING: this is the only operator that can be typed without number (in an empty screen). The reason is to allow to start with a negative number.
+    //this is going to be a struggle when trying to program the '=' button.
+        addToScreen(' - ');
+        updateInnerExpression();
+}
 })
 
 split.addEventListener('click', () => {
@@ -123,6 +125,61 @@ split.addEventListener('click', () => {
             updateInnerExpression();
     }
 })
+
+deletee.addEventListener('click', () => {
+    const deleteLastChar = () => textOnScreen.innerHTML = textOnScreen.innerHTML.slice(0, -1);
+    if (textOnScreen.innerHTML.length > 0) {
+        if (textOnScreen.innerHTML[textOnScreen.innerHTML.length - 1] === ' ') {
+            deleteLastChar();
+            deleteLastChar();
+            deleteLastChar();
+        } else {
+            deleteLastChar()
+        }
+    } else {
+        cleanEverything();
+    }
+    updateInnerExpression();
+})
+
+function isAnOperator (thing) {
+    switch (thing) {
+        case '+':
+        return true;
+        break;
+        case '-':
+        return true;
+        break;
+        case '/':
+        return true;
+        break;
+        case 'x':
+        return true;
+        break;
+        default:
+        return false;
+    }
+}
+
+equal.addEventListener('click', () => {
+    if (isAnOperator(innerExpression[innerExpression.length - 1]) == true) {
+        //If the array ends with an operator, throws and error and the operation can´t be done
+        window.alert('ERROR: Please finish the operation or take off the las operator.')
+        } else if (innerExpression.length >= 3) { //Evaluates if the operation is worth doing (only if it has two/more numbers in it)
+        if (innerExpression[0] === '-') { //If the array starts with the minus, it takes it off and transforms the second number to a negative one.
+            innerExpression[1] = `-${innerExpression[1]}`;
+            innerExpression.shift();
+        }
+        //Now, with this two last verifications, we know that the array has a secure pattern to operate with like ['2','x','4'] or ['4.2','+','2.01','/','2']
+        let result = innerExpression.shift(); //stores the first number and removes it.
+        while (innerExpression.length >= 2) {
+            let operator = innerExpression.shift();
+            let number = innerExpression.shift();
+            
+        }
+    }
+    })
+
 
 // const numbers = document.getElementsByClassName('.number');
 // numbers.forEach(number => {  DOESN´T WORK BECAUSE .getElementsByClassName() returns an HTMLCollection, not an array
@@ -152,4 +209,3 @@ split.addEventListener('click', () => {
     //     if (innerExpression[innerExpression.length -1][
 
         // }
-        
