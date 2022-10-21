@@ -2,7 +2,7 @@ let textOnScreen = document.querySelector('.screen p');
 
 // THIS IS WHAT THE USER SEES IN THE SCREEN
 // textOnScreen.innerHTML = "YEAHH I'm your slutty machine!";
-textOnScreen.innerHTML = "YEAHH I'm your slutty machine";
+textOnScreen.innerHTML = "";
 
 // THIS IS WHAT THE PROGRAM SEES: an array wiht the numbers and the operations, without spaces.
 let innerExpression = [];
