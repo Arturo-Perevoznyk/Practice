@@ -1,0 +1,62 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 6rem auto 2rem;
+    border-radius: 10px;
+    background-color: rgb(206, 206, 206);
+    height: 30rem;
+    width: 30rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0.6rem;
+    box-shadow: 0 0 40px 25px rgb(206, 206, 206);
+}
+
+.container > * {
+    border-radius: 10px;
+    border: 2px solid rgb(177, 177, 177);
+    background-color: white;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.buttons {
+    position: absolute;
+    top: 10rem;
+    left: 7rem;
+    width: 10rem;
+    height: 20rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.buttons > *{
+    padding: 1.1rem;
+    box-shadow: 0 0 50px 20px rgb(206, 206, 206);
+    background-image: linear-gradient(to bottom, #ffffff, #f9f9f9, #f3f3f3, #eeeeee, #e8e8e8);    border: 2px solid rgb(212, 212, 212);
+    border-radius: 20px;
+    background-color: white;
+    user-select: none;
+    color: rgb(109, 109, 109);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    align-self: center;
+    justify-self: center;
+    width: max-content;
+}
+
+.buttons >*:active {
+    background-image: linear-gradient(to bottom, #e8e8e8, #eeeeee, #f3f3f3, #f9f9f9, #ffffff);
+    padding: 1rem;
+    font-size: 1.25rem;
+}
+
+.buttons *:hover {
+    cursor: pointer;
+}
