@@ -34,6 +34,7 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     margin: auto;
     margin-top: 6rem;
 }
@@ -58,6 +59,7 @@ p {
 /*MAN*/
 #man {
     background-color: #3086a3;
+    transition: opacity 250ms;
 }
 
 #man:hover {
@@ -68,6 +70,7 @@ p {
 #woman {
     background-color: #ce86e0;
     margin: 0 5rem;
+    transition: opacity 250ms;
 }
 
 #woman:hover {
@@ -77,6 +80,7 @@ p {
 /*WEIRDO*/
 #weirdo {
     background-color: #5bfa90;
+    transition: opacity 250ms;
 }
 
 #weirdo:hover {
@@ -112,11 +116,15 @@ img {
     left: 2rem;
     background-color: rgb(177, 177, 177);
     padding: 0.5rem 1rem;
-    transition: backgroundColor 250ms, box-shadow 250ms;
+    transition: backgroundColor 250ms, box-shadow 250ms, padding 100ms;
 }
 
 #reset-button:hover {
     cursor: pointer;
     background-color: rgb(122, 122, 122);
     box-shadow: 0 0 0 0.4rem lightgrey;
+}
+
+#reset-button:active {
+    padding: 0.3rem 0.8rem;
 }

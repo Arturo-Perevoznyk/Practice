@@ -1,21 +1,23 @@
-* { /* This is good practice to get rid of the default paddings and margins */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-body, html {
-    height: 100%; 
+html {
+    height: 100%;
+    width: 100%;
+    background-color: white;
 }
 
-main { /* I set this to 'main' after trying to resize body to 50% and fail. 
-        Why the body cannot be resized??*/
+body {
+    height: 100%;
     width: 40%;
     height: auto;
-    box-sizing: border-box;
-    text-align: justify; /* To justify the text */
-    margin: auto; /* To center the body*/
+    text-align: justify;
+    margin: auto;
     padding: 25px;
-    background-color:darkseagreen;
+    background-color: darkseagreen;
 }
 
 p {
@@ -23,29 +25,34 @@ p {
 }
 
 #firstParagraph {
-    margin:0; /* This will prevail over the <p> margin-top because it is more specific*/
+    margin: 0;
+    /* This will prevail over the <p> margin-top because it is more specific*/
 }
 
-/* IMAGES CONFIGURATION */
+/* IMAGES */
 #bread {
     height: 300px;
     width: auto;
     float: right;
-    margin-left: 15px; /*¡¡¡ margins of floating and absolutely positioned elements never collapse !!!*/
+    margin-left: 15px;
+    /*¡¡¡ margins of floating and absolutely positioned elements never collapse !!!*/
     margin-top: 15px;
     margin-bottom: 15px;
 }
+
 #street {
     height: 190px;
     width: auto;
     float: left;
     margin-right: 15px;
 }
+
 #houses {
     width: 200px;
     height: auto;
     display: inline;
 }
+
 .clear {
     clear: both;
 }

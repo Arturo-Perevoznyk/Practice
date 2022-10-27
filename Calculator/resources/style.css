@@ -48,6 +48,7 @@ h1 {
 .container > *:hover:not(.screen) {
     cursor: pointer;
     background-color: rgb(214, 214, 214);
+    /* This is to not letting the user select text/numbers */
     user-select: none;
 }
 

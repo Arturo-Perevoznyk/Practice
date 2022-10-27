@@ -1,4 +1,4 @@
-/*The variables*/
+// // /*The variables*/
 let man = document.getElementById('man');
 let woman = document.getElementById('woman');
 let weirdo = document.getElementById('weirdo');
@@ -11,18 +11,18 @@ let resetButton = document.getElementById('reset-button')
 
 /*The functions*/
 function showManDuties() {
-    woman.style.visibility = 'hidden';
-    weirdo.style.visibility = 'hidden';
+    woman.style.opacity = '0';
+    weirdo.style.opacity = '0';
     manPicture.style.display = 'block';
 }
 function showWomanDuties() {
-    man.style.visibility = 'hidden';
-    weirdo.style.visibility = 'hidden';
+    man.style.opacity = '0';
+    weirdo.style.opacity = '0';
     womanPicture.style.display = 'block';
 }
 function showWeirdoDuties() {
-    woman.style.visibility = 'hidden';
-    man.style.visibility = 'hidden';
+    woman.style.opacity = '0';
+    man.style.opacity = '0';
     weirdoPicture.style.display = 'block';
 }
 function resetEverything() {
@@ -30,9 +30,9 @@ function resetEverything() {
     manPicture.style.display = 'none';
     womanPicture.style.display = 'none';
 
-    woman.style.visibility = 'visible';
-    man.style.visibility = 'visible';
-    weirdo.style.visibility = 'visible';
+    woman.style.opacity = '1';
+    man.style.opacity = '1';
+    weirdo.style.opacity = '1';
 }
 
 /*The fun part*/
