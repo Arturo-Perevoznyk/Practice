@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    font-size: 1.6rem;
+    padding: 0.6rem;
+    background-color: rgb(92, 92, 92);
+}
+
+header ul {
+    margin: auto;
+    width: max-content;
+}
+
+header li{
+    display: inline-block;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 0.3rem 1rem;
+    transition: background-color 250ms;
+}
+
+header li:hover {
+    background-color:  black;
+    cursor: pointer;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+form {
+    position: absolute;
+    left: 1.5rem;
+    top: 5rem;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.content {
+    padding: 1rem;
+    width: 30%;
+    min-height: 10rem;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid white;
+    box-shadow: 0 0 30px 20px rgb(201, 201, 201);
+    margin: 3rem auto;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Tittle of the list of rhymes */
+h3 {
+    text-decoration: underline;
+    margin-bottom: 0.7rem;
+}
+
+/* TO GET RID OF THE BLUE FOCUS RECTANGLE (DUNNO HOW THIS WORKS YET, DON´T BOTHER) */
+input:focus, textarea:focus {
+    outline: none;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid lightgray;
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+button {
+    border: 2px solid rgb(99, 99, 99);
+    font-size: 1.3rem;    
+    display: block;
+    margin: 2rem auto;
+    padding: 1rem;
+    border-radius: 10px;
+}

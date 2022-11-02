@@ -5,11 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./resources/style.css">
 </head>
 <body>
-    <div class="content"></div>
+    <header>
+        <ul>
+            <li><a href="./index.html">GET practice</a></li>
+            <li><a>POST practice</a></li>
+        </ul>
+    </header>
+    <form>
+        <label for="input">Enter your word:</label>
+        <input type="text" id="input" placeholder="example" value="">
+        <!-- The default type of <button> is 'submit', so if type='button' is not added, it will refresh the page avery time is clicked -->
+        <button id="button" type="button">Find rhyme</button>
+    </form>
+    <div class="content">
+        <!-- Rendered in script.js -->
+    </div>
 
-    <script src="./script.js"></script>
+    <script src="./resources/script.js"></script>
 </body>
 </html>
