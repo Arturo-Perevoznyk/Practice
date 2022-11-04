@@ -1,7 +1,5 @@
-let textOnScreen = document.querySelector('.screen p');
-
 // THIS IS WHAT THE USER SEES IN THE SCREEN
-// textOnScreen.innerHTML = "YEAHH I'm your slutty machine!";
+let textOnScreen = document.querySelector('.screen p');
 textOnScreen.innerHTML = "";
 
 // THIS IS WHAT THE PROGRAM SEES: an array wiht the numbers and the operations, without spaces.
@@ -156,7 +154,8 @@ equal.addEventListener('click', () => {
         solveAllAdditions(innerExpression); // Does the sums
         solveAllSubstractions(innerExpression); //Does the substractions
         if ((innerExpression == Infinity) || (innerExpression == -Infinity) || (innerExpression === 'NaN')){ //NEED TO BE SOLVED: the NaN is not working
-            textOnScreen.innerHTML = "That's stupid, BITCH!";
+            // textOnScreen.innerHTML = "That's stupid, BITCH!";
+            textOnScreen.innerHTML = "No se puede, GILIPOLLAS!";
         } else {
         console.log(`${innerExpression}`)
         textOnScreen.innerHTML = innerExpression;

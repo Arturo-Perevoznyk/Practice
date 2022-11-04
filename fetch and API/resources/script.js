@@ -17,7 +17,7 @@ const findResults = wordToSend => {
     fetch(`https://api.datamuse.com/words?rel_rhy=${wordToSend}`)
         .then(response => {
             if (response.ok) return response.json();
-            throw new Error('Error with the JSON, BITCH!');
+            throw new Error('Error with the JSON, FUCKER!');
         }, networkError => console.log(networkError))
         .then(arr => {
             if (arr.length == 0) throw new Error(`No rhyme for "${wordToSend}"! :(`);
