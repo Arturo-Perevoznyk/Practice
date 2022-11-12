@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 30px; /*This is going to be the rem*/
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+  background-color: blue;
+}
+
+h1{
+  margin: auto;
+  padding: 0.5rem;
+  text-align: center;
+  text-decoration:underline;
+  background-color: rgba(255, 255, 255, 0.597);
+}
+
+p{
+  text-align: center;
+  margin-top: 1rem;
+}
+
+Button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin: 1rem auto;
+  display: block;
+}
+
+Button:hover {
+  cursor: pointer;
+}
