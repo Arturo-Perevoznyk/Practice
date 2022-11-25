@@ -10,6 +10,7 @@ root.render(
     <h1>Damn! What a button!</h1>
     <p>Clicked: x times</p>
     <Button text='Press to change color'/>
-    <Circle/> {/*WHY IS THIS NOT RENDERING???*/}
+    <Circle/>
+    <Circle/>
   </>
 );
