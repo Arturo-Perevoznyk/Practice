@@ -21,19 +21,11 @@ p {
     font-size: 40px;
 }
 
-.container-container {
-    display: flex;
-}
-
 /*FORMATTING CONTINER AND BOXES*/
 
 .container {
     box-sizing: border-box;
-    width: 1000px;
-    /*if the width is changed to 150px and the container's display is flex, the boxes shrinks (eventhough they are set
-    to a specific width)*/
-    height: 550px;
-    /*if the height is changed to 25px and the container's display is flex, boxes overflow!! hmmmm...*/
+    width: 80%;
     background-color: rgb(128, 30, 30);
     border: 5px solid black;
     border-radius: 5px;
@@ -57,6 +49,7 @@ p {
     align-items: stretch;
     /*Only works if there is no specific height set. Elements with a minimum height or no height set will stretch*/
     flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .box {
@@ -117,7 +110,7 @@ p {
 footer {
     box-sizing: border-box;
     width: 100%;
-    height: 10rem;
+    height: 5rem;
     background-color: lightslategrey;
     border: 1px solid black;
     margin-top: 3rem;

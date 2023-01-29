@@ -38,18 +38,22 @@ h1 {
     text-align: center;
 }
 
+section:nth-of-type(1) {
+    margin: 50px;
+}
+
 .frame {
     width: 100%;
     border: 1px solid black;
-    overflow: hidden;
+    /*   overflow: hidden;  -->    Does not affect? Why? */
     background-image: url("image.jpg");
     background-repeat: no-repeat;
-    transition: opacity  0.5s;
+    transition: opacity 0.5s;
 }
 
 .frame:hover {
-/* The  hover thing is not polished: it does transition in 0.5s, but when the cursor is not hovering it fades instantly. Why? 
-SOLVED: I was applying the transition property in frame:hover, not in the .frame as it needs to be.
+    /* (SOLVED) The hover thing is not polished: it does transition in 0.5s, but when the cursor is not hovering it fades instantly. Why? 
+REASON: I was applying the transition property in frame:hover, not in the .frame as it needs to be.
     transition: opacity  0.5s; */
 
     opacity: 0.7;
@@ -88,4 +92,3 @@ SOLVED: I was applying the transition property in frame:hover, not in the .frame
     grid-template-columns: 160px 70%;
     grid-template-rows: 50px 50px;
 } */
-
