@@ -1,0 +1,27 @@
+*{
+    background-color: black;
+    color: white;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+button {
+    height: 3rem;
+    margin: auto 0.5rem;
+    transition: background-color 100ms;
+}
+
+button:hover {
+    background-color: rgb(77, 77, 77);
+}
+
+button:active {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+
+
+.container {text-align: center;}
