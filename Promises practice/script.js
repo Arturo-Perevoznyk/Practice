@@ -1,15 +1,10 @@
 function job(data) {
     return new Promise((resolve, rejected) => {
-        if (typeof data !== 'number') {
-            rejected('error');
-        } else if (data%2 == 1) {
-            setTimeout(() => resolve('odd'), 1000);
-        } else if (data%2 == 0){
-            setTimeout(() => resolve('even'), 2000);
-        }
-    })
-}
+        if (data) resolve('The word is ' + data);
+        throw new Error('Hello! Im the Error')
+})}
 
-job('asea')
-    .then(message => console.log(message))
-    .catch(message => console.log(message))
+job('')
+.then(message => console.log(message))
+//  message => console.log('This is the catch message: ' + message))
+.catch(e => console.log(e))
