@@ -1,9 +1,15 @@
-const obj = {
+let obj = {
     name: 'Sam',
     height: 179,
     eatsTooMuch: true
 }
 
-const jsonObj = obj.stringify();
+console.log('Original object: ' + obj)
 
-console.log(jsonObj)
+let jsonObj = JSON.stringify(obj);
+
+console.log('Object after JSON.stringify(): ' + jsonObj)
+
+obj = JSON.parse(jsonObj)
+
+console.log('Back again: ' + obj)
