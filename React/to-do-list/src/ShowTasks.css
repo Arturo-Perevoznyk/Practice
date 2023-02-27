@@ -1,0 +1,12 @@
+.task * {
+    display: inline-block;
+}
+
+.task>img {
+    width: 10px;
+    margin-left: 1rem;
+}
+
+.task img:hover {
+    cursor: pointer;
+}
